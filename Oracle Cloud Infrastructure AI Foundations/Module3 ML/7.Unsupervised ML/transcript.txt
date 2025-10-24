@@ -1,0 +1,5 @@
+Prepare the data while preparing the data. The basic preprocessing steps, like removing missing values, normalizing the data, and feature scaling are performed. Create similarity matrix. The choice on which similarity matrix to use depends on the nature of the data, and the specific clustering algorithm being used.
+
+Some common similarity metrics which are frequently used are Euclidean distance metric, Manhattan distance metric, cosine similarity matrix, and Jaccard similarity matrix run the clustering algorithm. Clustering algorithms use similarity matrix to cluster the data. The different types of clustering algorithms are partition-based, hierarchical-based, density-based and distribution-based.
+
+Interpret the results and adjust your clustering. Checking the quality of your clustering output is iterative and exploratory. Because there is no labeled output, clustering lacks the ground truth that can verify the output. Verify the results against expectations at the cluster level and the example level. Improving the result requires iteratively experimenting, with the previous steps to see how they affect the clustering. Thanks for watching.

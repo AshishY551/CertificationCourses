@@ -1,0 +1,14 @@
+**feat(course-progress): completed Modules 1–4 and initiated Module 5 (OCI AI Foundations)**
+
+**Details:**
+
+* 📘 **Module 1 – Welcome, Intro & Course Overview:** Completed with structured notes and key takeaways.
+* 🤖 **Module 2 – Artificial Intelligence (AI):** Covered AI fundamentals, types, and applications with detailed summaries and soft notes.
+* 🧠 **Module 3 – Machine Learning (ML):** Completed with algorithm classifications, supervised/unsupervised concepts, and hands-on insights.
+* ⚙️ **Module 4 – Deep Learning Foundations:** Finished with detailed notes on neural networks, architectures, activation functions, and optimization principles.
+* 🚀 **Module 5 – Generative AI & LLM Foundations:** Started with initial concepts on LLMs, generative models, and AI innovation use cases.
+* 🗂️ Organized all module folders with updated resources, detailed notes, and documentation.
+
+**Commit type:** 📚 Course Progress Update
+**Scope:** Oracle Cloud Infrastructure (OCI) AI Foundations Course
+
