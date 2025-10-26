@@ -1,14 +1,17 @@
-**feat(course-progress): completed Modules 1–4 and initiated Module 5 (OCI AI Foundations)**
+**feat(course-progress): 1st completed Modules 1–5 and Now Completed and added Modules 6–8 (OCI AI Portfolio, GenAI, and AI Services)**
 
 **Details:**
 
-* 📘 **Module 1 – Welcome, Intro & Course Overview:** Completed with structured notes and key takeaways.
-* 🤖 **Module 2 – Artificial Intelligence (AI):** Covered AI fundamentals, types, and applications with detailed summaries and soft notes.
-* 🧠 **Module 3 – Machine Learning (ML):** Completed with algorithm classifications, supervised/unsupervised concepts, and hands-on insights.
-* ⚙️ **Module 4 – Deep Learning Foundations:** Finished with detailed notes on neural networks, architectures, activation functions, and optimization principles.
-* 🚀 **Module 5 – Generative AI & LLM Foundations:** Started with initial concepts on LLMs, generative models, and AI innovation use cases.
-* 🗂️ Organized all module folders with updated resources, detailed notes, and documentation.
+* 📘 **Module 1 – Course Intro & Overview:** Completed with organized notes and summaries.
+* 🤖 **Module 2 – Artificial Intelligence (AI):** Fully documented fundamentals, types, and use cases.
+* 🧠 **Module 3 – Machine Learning (ML):** Included detailed notes on algorithms, workflows, and real-world examples.
+* ⚙️ **Module 4 – Deep Learning Foundations:** Completed with structured insights on neural networks and architectures.
+* 🚀 **Module 5 – Generative AI & LLM Foundations:** Completed with coverage of LLMs, generative modeling, and OCI integrations.
+* 💼 **Module 6 – OCI AI Portfolio:** Added folder with curated notes on Oracle’s AI tools, capabilities, and ecosystem overview.
+* 🧩 **Module 7 – OCI GenAI:** Added detailed learning materials and notes on OCI Generative AI offerings and model endpoints.
+* ☁️ **Module 8 – OCI AI Services:** Added structured notes covering OCI Vision, Speech, Language, and Anomaly Detection services.
+* 🗂️ **Folder Structure Updated:** All module folders (1–8) now include detailed documentation, soft notes, and reference materials for comprehensive learning.
 
-**Commit type:** 📚 Course Progress Update
-**Scope:** Oracle Cloud Infrastructure (OCI) AI Foundations Course
+**Commit Type:** 📚 Course Progress Update
+**Scope:** Oracle Cloud Infrastructure AI Foundations – Extended Progress
 

@@ -1,0 +1,41 @@
+Welcome to the second lesson on transformer architecture. As we saw earlier, transformer architecture and models have two main parts; the encoder and the decoder. Encoder reads the input text, encodes it into embeddings that capture the meaning of the input text. And then the decoder uses these embeddings to generate the output text at a high level. This is how the encoder and the decoder portions work. But let's look into some more details.
+
+Before we dive deeper into the encoder/decoder architecture, there is an important concept we need to look at, which is around tokens and tokenization. Large language models understand tokens rather than words. What are these tokens? A token can be a word. It could be an entire word. It could be part of a word or it could even be a punctuation symbol. A common word, such as apple, is a token. A word such as friendship is made up of two tokens, friend and ship.
+
+In general, number of tokens per word depend on the complexity of the text. For simple text which have simple words, you can assume one token per word on average. For complex text which have fewer common words, you can assume two to three tokens per word on average.
+
+So, for example, a sentence like this would actually map to 15 tokens in total. And you can see how the sentence is tokenized with simple words like many, words, map, et cetera being a token itself, one token.
+
+But some words like indivisible, which is not that frequently encountered word getting divided into two tokens. And some punctuation symbols have their own tokens, as you can see here; comma, colon, period, et cetera. So it's an important concept. You will see how tokens are used in this particular slide.
+
+There is another important concept, which is around embeddings. Embeddings are numerical representation of a piece of text. The piece of text could be a word, could be a phrase, could be a sentence, could be a paragraph, or even one or more paragraphs.
+
+Embeddings make it easy for computers to understand the relationship between pieces of text. So as you can see in this example here, if I have a phrase they sent me a, which we saw in the introduction to large language models lesson, what we first do is we convert these words into tokens. So that's what you see as tokenization here. And these could be one token per word. So they is a token, sent is a token, me is a token, a is a token.
+
+Now, they go to this particular box here, which is an encoder model, and out comes numerical representations. Now, these numerical representations are also referred to as vector representations or vector data. And you can see we have four vectors for each of these four words or tokens, but we also have a fifth one, which is for the entire sentence. So this is what embeddings are referred to. This is what embeddings look like.
+
+And as we discussed, that box in between is what is an encoder model, which basically converts a sequence of words to an embedding or a vector representation, as you can see here. Now, these vector representations are designed to be consumed later by other models, to do things like classification.
+
+But a lot of their use nowadays has also been around vector databases and what is referred to as semantic search, which is basically, let's say, you want to take an input text snippet and retrieve a similar document from a corpus based on the semantic meaning, that is basically referred to as semantic search.
+
+Now, to accomplish this, what you could do is you could encode each document in the corpus and store them in a vector database. When you get the input query from a user, you encode that query too, and check the similarity of the encoded input against the similarity of each document in the database. And then you return the most similar or the most relevant document.
+
+Now, you can take this content and send it to LLM to help answer the user question. And LLM uses the content plus the general knowledge it has to provide an informed answer. So this whole architecture is what is referred to as retrieval-augmented generation, or RAG. And you can see that good retrieval quality is essential to make this work. And this is where embeddings play a critical role.
+
+The second class of model are the decoder models. Decoder models take a sequence of words and output the next word, as you can see here. So this phrase or sequence of words is sent. The sent is passed to the model. They sent me a, and the decoder model generates the next token, which is, let's say, in this case, lion.
+
+These model take a sequence of tokens and emit the next token in the sequence based on the probability of the vocabulary, which they compute and which we saw in the first lesson on introduction to large language model.
+
+Important thing to keep in mind is a decoder only produces a single token at a time. We can always invoke a decoder over and over to generate as many new tokens as we want, but always producing a single token at a time.
+
+The last architecture I will briefly discuss are encoder-decoder architecture. Now, in this architecture, basically we glue a decoder into an encoder, so as you can see here. They have been primarily being utilized for sequence-to-sequence tasks, like translation. What I'm showing here is an example of translation with an encoder-decoder model.
+
+The way this works is as follows: We send the English words to the model. They get tokenized and passed to the encoder, which embed all the tokens in addition to the sentence. So you get these embeddings, which are vector representations. And then the embeddings get passed to the decoder, which decodes words one at a time.
+
+What you will notice here is self-referential loops to the decoder. What I'm trying to visually communicate is that decoder is generating tokens, one at a time, as we discussed in the previous slide. After it generates a token, it sends it back to the decoder along with the rest of the input sequences to generate the next token. So you can see here, these self-referential loops. And this happens so on and so forth until the entire sequence is generated.
+
+So to recap, we have different transformer architectures. And these are the variants of the original transformer architecture, and they focus on either the encoder or the decoder or both portions and are designed for different tasks. So there are encoder-only models, which transform input data into a sequence of vectors. And where would we use them? You saw, we could use them in the context of RAG. We would use them for vector databases. And we would use for something like semantic search. And these are useful for understanding input data without generating a new sequence necessarily.
+
+The decoder-only models generate sequences such as text based on a given input, and they are useful for tasks that involve generating data like you're generating an article, text generation. And then finally, we have the encoder-decoder model, which combines encoder for input and decoder for sequence generation. An ideal use case would be something like sequence to sequence tasks, like machine translation.
+
+So hopefully, you got a good understanding of the transformer architecture types as we discussed them in this lesson. In the next lesson, we are going to look at important part of large language models, which are prompts and prompt engineering. I hope you found this lesson useful. Thanks for your time.

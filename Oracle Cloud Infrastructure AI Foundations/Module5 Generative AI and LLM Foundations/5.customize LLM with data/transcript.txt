@@ -1,0 +1,47 @@
+Hello, and welcome. In this lesson, let us look at how you can customize LLMs to work with your own data. So the framework we are going to discuss here is as follows.
+
+So we have two axes, the horizontal and the vertical axis. On the horizontal axis, you have context optimization. Here, we are providing more specific and detailed information for the LLM to draw from. So example could be user-specific information, like orders users have made on a website. On the vertical axis is LLM optimization. Here, we are adapting the LLM to accomplish specific tasks or work within a given domain. So this could be your fine-tuning the model on legal domain.
+
+So the first and the most obvious place to start with is prompt engineering. It's the fastest, the quickest. You can learn quickly, test, iterate quickly. Then if you need more context, you could use something like Retrieval Augmented Generation. If you need more instruction-following, then you can use fine-tuning. And these methods are all additive. So you might end up using all of them.
+
+Let us look at each of them in a little bit more detail. So starting with Retrieval Augmented Generation, here what we do is the language model can query enterprise knowledge bases. So these could be vector database. It could be wikis, et cetera to provide grounded response. And what we mean by grounded is the generated text is grounded in a document if the document supports the text.
+
+So on the left-hand side, you can see a person chatting with a chatbot. And the person wants to return the dress they just bought. And the chatbot says, yes, sure. You can return. But I need to check the return policy. And then the chatbot goes to an enterprise database, looks up the chatbot return policy, which says 30 to 90 days, and items cannot be on sale. And then converses with the user, saying these are the rules. And the user says, I don't know if my item was on sale.
+
+So they upload a receipt. It's using some kind of a vision service, extracting the price and the date when the item was sold, going, again, back to an enterprise database, returning the data and saying that your item can be returned. Now, this is an example of a RAG implementation. And you can see how the answers are grounded. It's going back-- the chatbot is going back to a vector database and figuring out the return policy, et cetera, the rules for the return policy.
+
+Now, RAG does not require fine-tuning. So that's a huge advantage. Literally what you are doing with RAG is there are two major components. One is retrieval, where you are searching over a corpus of information relevant to respond to a user, like you see here. And the second is augmented generation. You are using that information retrieved to form a more informed response.
+
+Now, using RAG, you can give LLM access to private knowledge that it otherwise would not have had, so the return policy in this case. By letting the model search over private database and use that information to form responses, the accuracy and usefulness of the model changes drastically, so as you can see on this example here. So that's an example of RAG implementation.
+
+Now, when we talk-- when we talk about LLM fine-tuning and inference, very simply, fine-tuning, the way it works is we take a pre-trained foundational model and provide some custom data and fine-tune that model, train that model, on that custom data. And we end up with this custom data.
+
+And then for inference, basically we give new text as an input. And the model generates output based on the knowledge it has learned during pre-training and fine-tuning. So based on both of that, the knowledge it has gained, it responds. So that's the inference for the fine-tuned model.
+
+How does really fine-tuning work? Well, what you are doing with fine-tuning is you are optimizing the model on a smaller domain-specific data set, as you can see here. You would use fine-tuning when the pre-trained model doesn't perform your tasks well or when you want to teach it something new. So it could be a unique domain. It could be new skills, tasks, unique style.
+
+So you take the pre-trained model, you infuse this knowledge, and then you end up with a custom model or a fine-tuned model. A fine-tuned model is basically adapting to a specific style and tone and learning domain-specific words and phrases, as is shown here.
+
+Now, we are not going to get into advanced concepts like how the weights are updated, et cetera. But in OCI, there is a method called T-Few fine-tuning, which inserts new layers and selectively updates only a fraction of the model's weight, as you can see here. Now, doing this, it significantly reduces the training time and the cost compared to updating all the layers of the pre-trained model. And this is more of an advanced concept which we discuss in other courses.
+
+There are two main benefits of fine-tuning. The first is you are improving the model performance on specific tasks. It can better-- because you are customizing the model to domain-specific data, it can better understand and generate contextually relevant responses. So that's number one.
+
+Number two is you are also improving the model efficiency. You are reducing the number of tokens. And you're condensing the expertise of a large model into a smaller, more efficient model. So those are two advantages, both improving model performance and also model efficiency.
+
+So the next question which comes up, an obvious question, is should you use one or another and when to use which method. Well, this is, again, a framework which you can use. Prompt engineering is-- the main advantage, it's very simple to use. There is no training cost. And when should you use it? When your LLM already understands topics that are necessary for the text generation.
+
+RAG system, on the other hand, is really useful to use when the data changes rapidly or when you want to mitigate hallucinations by grounding answers, as you saw in the chatbot example. And the advantages are quite obvious. You have you're grounding the results. You are accessing the latest data. The disadvantage is you require a compatible data source. If your data source is not good, your retrieval quality is not going to be good. And it's more complex to set up.
+
+And finally, fine-tuning is needed when your LLM does not perform well on a particular task and the data required might be too large. So you would use fine-tuning. The advantage, as we discussed on the previous slide, model performance improves. Model efficiency improves. But the disadvantage is it requires a labeled data set, which can be expensive to acquire and time-consuming. And it requires more resources to do.
+
+All right. So finally, let me leave you with this kind of framework, which we talked at the beginning of this lesson, and discuss how you might end up using all of them. So a typical journey would look something like this.
+
+You start off at the bottom corner. You have a prompt and an evaluation framework. And you figure out what the baseline is. Then you give few short examples of input/output pairs you want the model to follow. And if you're happy here, probably just might do prompt engineering and not do anything other than that.
+
+Now, let us say these few short examples increase your model performance. And now you can hook the model to an enterprise knowledge base and create a RAG system, as we discussed. So you might actually do it. And your results look good. Your evaluator is the baseline. And probably might just stop here.
+
+But if not, let's say the model output is not coming out in the format or the style that we want, then you can fine-tune this RAG-optimized model. So you could optimize it and then fine-tune this model. And maybe you are happy there.
+
+But let's say if the retrieval with this model is not good. So you can optimize the retrieval. And you can optimize the RAG system, and so on and so forth. You can see how this works iteratively. And you end up using all these three mechanisms. So this is a good framework to think about when you are thinking about prompt engineering retrieval, augmented generation, and fine-tuning.
+
+So that's pretty much it. It's a very interesting area. It's something which is very useful, this kind of framework, to think about when you are thinking about these different mechanisms which you can use to customize LLMs to work with your own data. I hope you found this lesson useful. Thanks for your time.
