@@ -1,0 +1,21 @@
+In this lesson, we will learn about responsible AI. We are increasingly using AI in our day-to-day work. But can we trust AI? For example, do we trust self-driven cars completely? Or do we accept AI-driven disease diagnosis without a second opinion?
+
+The guiding principles for AI to be trustworthy are AI should be lawful, complying with all applicable laws and regulations. AI should be ethical. That is, it should ensure adherence to ethical principles and values that we uphold as humans. And AI should be robust both from a technical and social perspective because even with the good intentions, AI systems can cause unintentional harm.
+
+AI systems do not operate in a lawless world. A number of legally binding rules at national and international level apply or are relevant to the development, deployment, and use of AI systems today. The law not only prohibits certain actions, but also enables others like protecting rights of minorities or protecting environment. Besides horizontally applicable rules, various domain-specific rules exist that apply to particular AI applications, for instance, the medical device regulation in the health sector.
+
+So let us discuss human ethics and fundamental rights. Human dignity encompasses the idea that every human being possesses an intrinsic worth, which should never be diminished or compromised. Systems should therefore be developed in a manner that respects and protects humans' physical and mental integrity. Freedom of the individual means a commitment to protect the freedom of expression and the right to private life and privacy.
+
+AI systems should serve to maintain and foster democratic processes and respect the choices of individuals. AI systems must not undermine democratic processes or democratic voting systems. In AI context, equality entails that the systems operations cannot generate unfairly biased outputs. And while we adopt AI, citizens' rights should also be protected.
+
+So our AI ethics derived from these. There are three main principles. AI should be used to help humans and allow for oversight. It should never cause physical or social harm. Decisions taken by AI should be transparent and fair and also should be explainable.
+
+As it follows, the ethical principles as responsive AI. So if we map the ethical principles to responsible AI requirements, these will be like AI systems should follow human-centric design principles and leave meaningful opportunity for human choice. This means securing human oversight. AI systems and environments in which they operate must be safe and secure. They must be technically robust and should not be open to malicious use.
+
+The development and deployment and use of AI systems must be fair, ensuring equal and just distribution of both benefits and costs. AI should be free from unfair bias and discrimination. Decisions taken by AI to the extent possible should be explainable to those directly and indirectly affected. Let us quickly see what is typical responsible AI implementation process looks like.
+
+First, a governance needs to be put in place. Second, develop a set of policies and procedures to be followed. And once implemented, ensure compliance by regular monitoring and evaluation. Typical roles that are involved in the implementation cycles are developers, deployers, and end users of the AI.
+
+One of the key challenges in using AI in health is ensuring its fairness and lack of bias. AI systems are only as good as the data that they are trained on. If that data is predominantly from one gender or racial group, the AI systems might not perform as well on data from other groups.
+
+Another challenge in using the AI in health is ensuring that it's transparent and explainable. AI systems often make decisions based on complex algorithms that are difficult for humans to understand. As a result, patients and health care providers can have difficulty trusting the decisions made by the AI, as systems must be regularly evaluated to ensure that they are performing as intended and not causing harm to patients. Thanks for watching.

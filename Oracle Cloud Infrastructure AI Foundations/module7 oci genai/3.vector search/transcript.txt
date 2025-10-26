@@ -1,0 +1,43 @@
+Hi, welcome to this lesson on AI Vector Search in Oracle Database 23ai. My name is Michelle Malcher. I'm a Director in Database Product Management. And I'm excited to walk you through how Oracle Database 23ai has built-in Vector Search capabilities. Let's dive in.
+
+AI Vector Search is built into the Oracle Database 23ai. In this lesson, we're going to take a look at the components available in the database. In this course, we have been talking about large language models and generative AI capabilities and OCI Gen AI services. Now we're going to drill down into the Oracle Database 23ai with AI Vector Search and see how it powers Gen AI pipelines with your data and apps.
+
+There are single-purpose vector databases, but Oracle Database 23ai converged database approach supports JSON, XML, graph, spatial, text, relational, and vectors for data-driven workloads. AI Vector Search is an innovative technology which can greatly enhance information retrieval by enabling efficient searches based on semantics across structured and unstructured data, as well as a critical component of the modern Gen AI systems.
+
+The database has SQL support for database-native vector generation, VECTOR datatype for storing vector embeddings, SQL syntax and function to perform similarity search with ease, and approximate search index packaged and tuned for high performance and quality.
+
+Oracle Database 23ai allows you to use models with API calls or load an ONNX model into the database. In this example, resnet_50 has been loaded into the database. Then you can pass the model you want to use into the VECTOR_EMBEDDING function along with the query image.
+
+The function returns a vector that you can pass into your database. The database has already stored other embeddings of other images. And using the same VECTOR_EMBEDDING function and model, AI Vector Search can perform similarity searches to return the top matches of the images that look like the query image.
+
+The VECTOR datatype has been added to create a table with vector columns, even with relational data. The dimension format can be included or you can use a simpler VECTOR specification without the dimension format. So why is this useful? Because as your models evolve and newer machine learning embedding models become available, your schema can stay the same.
+
+Now, to do similarity searches, the VECTOR_DISTANCE function is used to determine the distance between the vectors. The smaller the distance between the vectors shows which entities are more similar. Distance metric can be stated to change from the default cosine and should be chosen based on the model that was used to generate the vector embeddings.
+
+Now that we have tables with the vector embeddings and distance function, Vector Search is used in SQL statements to find the closest matches to a given query. In this example, we are looking to find the top 10 positions matching a candidate's resume that are in their preferred cities.
+
+It combines applicant data, job data, and AI Vector Search in five lines of SQL. It is a single integrated solution, all data fully consistent, that is simple to implement. Vector Indexes are not just for performance but can also control the accuracy. Creating a Vector Index is the same as creating an index on other tables.
+
+There are additional options with organization and distance. The organization of a vector is based if an index will fit in-memory or not using INMEMEORY NEIGHBOR GRAPH for in-memory, otherwise, use NEIGHBOR PARTITIONS. Just like VECTOR_DISTANCE function, the DISTANCE clause is optional with the default of COSINE and should be used based on the model that was used to generate the embeddings.
+
+TARGET ACCURACY clause is used to indicate the default accuracy the index should use for similarity search queries. You can also specify the target accuracy in a query and the indexes that are used with the approximate searches.
+
+We can specify APPROXIMATE keyword in the FETCH clause, which indicates a similarity search using a Vector Index. When returning the top five customers, the accuracy, either defined in the index or query, provides the quality of the approximate results.
+
+So if a target accuracy was set at 80, the approximate results of the top five has four out of five correct matches. Accuracy of 80%. If there is no Vector Index with this query, an exact search might also be used, or if the SQL Optimizer might also decide that an index access plan would be too expensive and uses exact.
+
+We had a previous example when we were looking at the vector, search, and SQL. But similarity search over joins is a differentiator with Oracle Database 23ai. It's essential to be able to do these joins because the enterprise data is usually normalized and available to provide more data attributes.
+
+The cost-based optimizer decides on the join choice and the vector index used for the performance of the queries. This query joins three tables-- Author, Books, and Pages. Each page in the Pages table has individually embedding and stored in the vector column.
+
+The qVec is a text embedding that is being searched on the pages and the query, returning the top five books containing text similar to this query text, where the genre of the book is fiction and the author of the book comes from India.
+
+The capability of AI Vector Search is that it can power a Gen AI pipeline. You have your data sources, which can be pretty much anything. It can be a database, a CSV file, even social media handle. You usually use a document loader to bring those documents in. Then you can transform those documents.
+
+For example, you can summarize them, you can split them, you can generate vectors for them using an embedding model stored in the vector database. And then the user can do similarity searches on that or use a RAG design pattern to interact with the LLMs.
+
+Using Oracle Database 23ai and AI Vector Search allows you to fully process the Gen AI pipeline. We also provide tight integration with third-party frameworks like LangChain and LamaIndex to enable developers to build more sophisticated applications.
+
+AI Vector Search is seamlessly integrated with the Oracle Database 23ai for enterprise-grade performance and reliability. There is converged SQL processing to perform AI vector power similarity searches directly on your business data.
+
+In a single query, it is simple to combine relational, document, spatial, graph, machine learning, and AI Vector Search. And there is efficient orchestration of Gen AI pipelines natively in the database or through integrated third-party frameworks. Thanks for joining me for this lesson and learning about Oracle AI vector search.

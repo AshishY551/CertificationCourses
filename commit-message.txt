@@ -1,4 +1,4 @@
-**feat(course-progress): 1st completed Modules 1–5 and Now completed and added Modules 6–8 (OCI AI Portfolio, GenAI, and AI Services)**
+**feat(course-progress): 1st completed Modules 1–5 and Now Completed and added Modules 6–8 (OCI AI Portfolio, GenAI, and AI Services)**
 
 **Details:**
 
@@ -11,6 +11,7 @@
 * 🧩 **Module 7 – OCI GenAI:** Added detailed learning materials and notes on OCI Generative AI offerings and model endpoints.
 * ☁️ **Module 8 – OCI AI Services:** Added structured notes covering OCI Vision, Speech, Language, and Anomaly Detection services.
 * 🗂️ **Folder Structure Updated:** All module folders (1–8) now include detailed documentation, soft notes, and reference materials for comprehensive learning.
+<<<<<<< HEAD
 
 **Commit Type:** 📚 Course Progress Update
 **Scope:** Oracle Cloud Infrastructure AI Foundations – Extended Progress
